@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     let vortaItemArray = ["কাঁচামরিচ ভর্তা", "বেগুন ভর্তা", "বেগুন পুড়ে ভর্তা", "শুকনা মরিচ ভর্তা", "চেপা শুটকি ভর্তা"]
     
     @IBOutlet weak var tableView: UITableView!
@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
 }
 
 // MARK: - Table View
@@ -40,6 +40,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return cell!
     }
     
-    
+    // MARK: Table view delegate
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let goToDetailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC
+        self.navigationController?.pushViewController(goToDetailVC!, animated: true)
+        
+        goToDetailVC?.vortaName = vortaItemArray[indexPath.row]
+        goToDetailVC?.vortaImg = UIImage(named: vortaItemArray[indexPath.row])! 
+    }
 }
 
