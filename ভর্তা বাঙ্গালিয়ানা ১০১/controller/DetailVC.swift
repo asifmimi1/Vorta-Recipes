@@ -10,9 +10,13 @@ import UIKit
 
 class DetailVC: UIViewController {
     
+    @IBOutlet weak var xxx: UIView!
+    @IBOutlet weak var yyy: UIView!
     var vortaImg = UIImage()
     var vortaName = ""
     
+    @IBOutlet weak var upokoronView: UIView!
+    @IBOutlet weak var pronalyView: UIView!
     
     @IBOutlet weak var textlbl1: UILabel!
     @IBOutlet weak var textlbl2: UILabel!
@@ -26,34 +30,49 @@ class DetailVC: UIViewController {
         vortaImage.image = vortaImg
         vortaNamelbl.text = vortaName
         
-        let text1 = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum The Extremes of Good and Evil by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32."
-        let text2 = """
-            When you write a string that spans multiple
-            lines make sure you start its content on a
-            line all of its own, and end it with three
-            quotes also on a line of their own.
-            Multi-line strings also let you write "quote marks"
-            freely inside your strings, which is great!
-        """
+        vortaImage.layer.cornerRadius = 12.0
+        //vortaImage.layer.masksToBounds = false
         
-        textlbl1.text = text1
-        textlbl2.text = text2
+        xxx.layer.cornerRadius = 12.0
+        xxx.layer.masksToBounds = true
+        
+        yyy.layer.cornerRadius = 12.0
+        yyy.layer.masksToBounds = true
         
         if vortaNamelbl.text == "কাঁচামরিচ ভর্তা"{
             textlbl1.text = """
-            -কাঁচামরিচ ২০ টি। \n-পেয়াজ কুচি ১ কাপ। \n-রসুন কুচি হাফ কাপ। \n-ধনে পাতা কুচি ১ টেবিল চামচ। \n-সরিষার তেল ২ টেবিল চামচ। \n-লবন স্বাদ মত।
+            -কাঁচামরিচ ২০ টি। \n-পেয়াজ কুচি ১ কাপ। \n-রসুন কুচি হাফ কাপ। \n-ধনে পাতা কুচি ১ টেবিল চামচ। \n-সরিষার তেল ২ টেবিল চামচ। \n-লবন স্বাদ মত।\n
             """
             textlbl2.text = """
-            পেনে তেল দিয়ে মরিচ,পেয়াজ,রসুন ভেজে নিন বাদামি করে, শেষে ধনিয়া পাতা দিয়ে নেড়ে নামিয়ে নিন। \n\nএবার শিল পাটায় মিহি করে বেটে নিন সব একসাথে করে।
-            এবার পরিমিত লবন আর তেল দিয়ে মেখে ভর্তা বানিয়ে নিন। \n\nতৈরি আপনার কাঁচামরিচ ভর্তা।
-            
+            পেনে তেল দিয়ে মরিচ,পেয়াজ,রসুন ভেজে নিন বাদামি করে, শেষে ধনিয়া পাতা দিয়ে নেড়ে নামিয়ে নিন।
+            \n\nএবার শিল পাটায় মিহি করে বেটে নিন সব একসাথে করে।
+            এবার পরিমিত লবন আর তেল দিয়ে মেখে ভর্তা বানিয়ে নিন।
+            \n\nতৈরি আপনার কাঁচামরিচ ভর্তা।\n
             """
             
+            
+            
+            
+//            textlbl1.layer.borderWidth = 2
+//            textlbl1.layer.borderColor = UIColor.gray.cgColor
+//            textlbl1.layer.shadowColor = UIColor.black.cgColor
+//            textlbl1.layer.shadowOffset = .zero
+//            textlbl1.layer.shadowRadius = 8
+//            textlbl1.layer.shadowOpacity = 1
+            textlbl1.layer.cornerRadius = 12.0
+            textlbl1.layer.masksToBounds = false
+            
+//            textlbl2.layer.borderWidth = 2
+//            textlbl2.layer.borderColor = UIColor.gray.cgColor
+//            textlbl2.layer.shadowColor = UIColor.black.cgColor
+//            textlbl2.layer.shadowOffset = .zero
+//            textlbl2.layer.shadowRadius = 8
+//            textlbl2.layer.shadowOpacity = 1
+            textlbl2.layer.cornerRadius = 12.0
+            textlbl2.layer.masksToBounds = false
+            
         }
+        
     }
     
-    
-    
-    
 }
-
