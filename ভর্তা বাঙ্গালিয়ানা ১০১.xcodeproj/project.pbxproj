@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55FD7F54505DA8C00B67EE99 /* Pods-ভর্তা বাঙ্গালিয়ানা ১০১.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ভর্তা বাঙ্গালিয়ানা ১০১.release.xcconfig"; path = "Target Support Files/Pods-ভর্তা বাঙ্গালিয়ানা ১০১/Pods-ভর্তা বাঙ্গালিয়ানা ১০১.release.xcconfig"; sourceTree = "<group>"; };
 		731ED23D24E18723007706AA /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		7327B5F824E062A7002207C9 /* ভর্তা বাঙ্গালিয়ানা ১০১.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ভর্তা বাঙ্গালিয়ানা ১০১.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7327B5FB24E062A7002207C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		7327B60724E062AC002207C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7327B60924E062AC002207C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7327B61324E071BD002207C9 /* CellTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTVC.swift; sourceTree = "<group>"; };
+		9B5EB6F5EEA8CAA755E1B76E /* Pods-ভর্তা বাঙ্গালিয়ানা ১০১.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ভর্তা বাঙ্গালিয়ানা ১০১.debug.xcconfig"; path = "Target Support Files/Pods-ভর্তা বাঙ্গালিয়ানা ১০১/Pods-ভর্তা বাঙ্গালিয়ানা ১০১.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,11 +43,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		337ADCDFE09A19B80E3644A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B4C5697A193E9DE5D039616 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B5EB6F5EEA8CAA755E1B76E /* Pods-ভর্তা বাঙ্গালিয়ানা ১০১.debug.xcconfig */,
+				55FD7F54505DA8C00B67EE99 /* Pods-ভর্তা বাঙ্গালিয়ানা ১০১.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7327B5EF24E062A7002207C9 = {
 			isa = PBXGroup;
 			children = (
 				7327B5FA24E062A7002207C9 /* ভর্তা বাঙ্গালিয়ানা ১০১ */,
 				7327B5F924E062A7002207C9 /* Products */,
+				6B4C5697A193E9DE5D039616 /* Pods */,
+				337ADCDFE09A19B80E3644A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7327B60C24E062AC002207C9 /* Build configuration list for PBXNativeTarget "ভর্তা বাঙ্গালিয়ানা ১০১" */;
 			buildPhases = (
+				B22156CA681A23996D043EDC /* [CP] Check Pods Manifest.lock */,
 				7327B5F424E062A7002207C9 /* Sources */,
 				7327B5F524E062A7002207C9 /* Frameworks */,
 				7327B5F624E062A7002207C9 /* Resources */,
+				E5EED960757302A9EE415F0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +192,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B22156CA681A23996D043EDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ভর্তা বাঙ্গালিয়ানা ১০১-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5EED960757302A9EE415F0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ভর্তা বাঙ্গালিয়ানা ১০১/Pods-ভর্তা বাঙ্গালিয়ানা ১০১-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ভর্তা বাঙ্গালিয়ানা ১০১/Pods-ভর্তা বাঙ্গালিয়ানা ১০১-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ভর্তা বাঙ্গালিয়ানা ১০১/Pods-ভর্তা বাঙ্গালিয়ানা ১০১-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7327B5F424E062A7002207C9 /* Sources */ = {
@@ -322,6 +386,7 @@
 		};
 		7327B60D24E062AC002207C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B5EB6F5EEA8CAA755E1B76E /* Pods-ভর্তা বাঙ্গালিয়ানা ১০১.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,6 +405,7 @@
 		};
 		7327B60E24E062AC002207C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55FD7F54505DA8C00B67EE99 /* Pods-ভর্তা বাঙ্গালিয়ানা ১০১.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

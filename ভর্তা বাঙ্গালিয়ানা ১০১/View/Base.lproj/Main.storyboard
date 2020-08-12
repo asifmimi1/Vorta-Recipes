@@ -124,6 +124,9 @@
                     <navigationItem key="navigationItem" title="ভর্তা বাঙ্গালিয়ানা " largeTitleDisplayMode="always" id="zzh-yU-hvt">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="8e7-1f-05X">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="sidemenu:" destination="BYZ-38-t0r" id="vlx-22-xbc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
