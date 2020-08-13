@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731AD47A24E543EB005ADBDE /* MenuNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731AD47924E543EB005ADBDE /* MenuNC.swift */; };
+		731AD48324E54FF6005ADBDE /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731AD48224E54FF6005ADBDE /* AboutUsVC.swift */; };
+		731AD48524E55024005ADBDE /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731AD48424E55024005ADBDE /* FavoriteVC.swift */; };
+		731AD48B24E550C4005ADBDE /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731AD48A24E550C4005ADBDE /* ShareVC.swift */; };
 		731ED23E24E18723007706AA /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731ED23D24E18723007706AA /* DetailVC.swift */; };
 		7327B5FC24E062A7002207C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7327B5FB24E062A7002207C9 /* AppDelegate.swift */; };
 		7327B5FE24E062A7002207C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7327B5FD24E062A7002207C9 /* SceneDelegate.swift */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		55FD7F54505DA8C00B67EE99 /* Pods-ভর্তা বাঙ্গালিয়ানা ১০১.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ভর্তা বাঙ্গালিয়ানা ১০১.release.xcconfig"; path = "Target Support Files/Pods-ভর্তা বাঙ্গালিয়ানা ১০১/Pods-ভর্তা বাঙ্গালিয়ানা ১০১.release.xcconfig"; sourceTree = "<group>"; };
+		731AD47924E543EB005ADBDE /* MenuNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNC.swift; sourceTree = "<group>"; };
+		731AD48224E54FF6005ADBDE /* AboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
+		731AD48424E55024005ADBDE /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		731AD48A24E550C4005ADBDE /* ShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		731ED23D24E18723007706AA /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		7327B5F824E062A7002207C9 /* ভর্তা বাঙ্গালিয়ানা ১০১.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ভর্তা বাঙ্গালিয়ানা ১০১.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7327B5FB24E062A7002207C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,16 @@
 				55FD7F54505DA8C00B67EE99 /* Pods-ভর্তা বাঙ্গালিয়ানা ১০১.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		731AD48124E54ED5005ADBDE /* Side Menu VC */ = {
+			isa = PBXGroup;
+			children = (
+				731AD48224E54FF6005ADBDE /* AboutUsVC.swift */,
+				731AD48424E55024005ADBDE /* FavoriteVC.swift */,
+				731AD48A24E550C4005ADBDE /* ShareVC.swift */,
+			);
+			path = "Side Menu VC";
 			sourceTree = "<group>";
 		};
 		7327B5EF24E062A7002207C9 = {
@@ -104,6 +122,8 @@
 				7327B5FF24E062A7002207C9 /* HomeVC.swift */,
 				7327B61324E071BD002207C9 /* CellTVC.swift */,
 				731ED23D24E18723007706AA /* DetailVC.swift */,
+				731AD47924E543EB005ADBDE /* MenuNC.swift */,
+				731AD48124E54ED5005ADBDE /* Side Menu VC */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -242,9 +262,13 @@
 			files = (
 				731ED23E24E18723007706AA /* DetailVC.swift in Sources */,
 				7327B60024E062A7002207C9 /* HomeVC.swift in Sources */,
+				731AD47A24E543EB005ADBDE /* MenuNC.swift in Sources */,
+				731AD48324E54FF6005ADBDE /* AboutUsVC.swift in Sources */,
+				731AD48524E55024005ADBDE /* FavoriteVC.swift in Sources */,
 				7327B61424E071BD002207C9 /* CellTVC.swift in Sources */,
 				7327B5FC24E062A7002207C9 /* AppDelegate.swift in Sources */,
 				7327B5FE24E062A7002207C9 /* SceneDelegate.swift in Sources */,
+				731AD48B24E550C4005ADBDE /* ShareVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

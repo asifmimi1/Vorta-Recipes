@@ -9,24 +9,86 @@
 import SideMenu
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MenuNavControllerDelegate {
+    
     
     let vortaItemArray = ["কাঁচামরিচ ভর্তা", "বেগুন ভর্তা", "বেগুন পুড়ে ভর্তা", "শুকনা মরিচ ভর্তা", "চেপা শুটকি ভর্তা"]
-    let sMenu = UISideMenuNavigationController(rootViewController: MenuController(with: ["Home", "Favorite", "Request", "Share", "About Us"]))
+    var sMenu: UISideMenuNavigationController?
+    
+    
+    let favoriteVC = FavoriteVC()
+    let aboutUsVC = AboutUsVC()
+    let shareVC = ShareVC()
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sMenu.leftSide = true
+        //sMenu?.setNavigationBarHidden(true, animated: false)
+        
+        let item = MenuNC(with: ["Home", "Favorite", "Share", "About Us"])
+        
+        sMenu = UISideMenuNavigationController(rootViewController: item)
+        item.delegate = self
+        sMenu?.leftSide = true
         SideMenuManager.default.menuAddPanGestureToPresent(toView: view)
         SideMenuManager.default.menuLeftNavigationController = sMenu
+        
+        addChildrenVC()
+    }
+    
+    func addChildrenVC()  {
+        
+        addChild(favoriteVC)
+        addChild(aboutUsVC)
+        addChild(shareVC)
+        
+        view.addSubview(favoriteVC.view)
+        view.addSubview(aboutUsVC.view)
+        view.addSubview(shareVC.view)
+        
+        favoriteVC.view.frame = view.bounds
+        aboutUsVC.view.frame = view.bounds
+        shareVC.view.frame = view.bounds
+        
+        favoriteVC.didMove(toParent: self)
+        aboutUsVC.didMove(toParent: self)
+        shareVC.didMove(toParent: self)
+        
+        favoriteVC.view.isHidden = true
+        aboutUsVC.view.isHidden = true
+        shareVC.view.isHidden = true
     }
     
     @IBAction func sidemenu(_ sender: UIBarButtonItem) {
-        present(sMenu, animated: true, completion: nil)
+        present(sMenu!, animated: true, completion: nil)
     }
     
+    func didSelectMenuItem(named: String) {
+        sMenu?.dismiss(animated: true, completion: nil)
+        
+        if named == "Home"{
+            self.title = "ভর্তা বাঙ্গালিয়ানা"
+            favoriteVC.view.isHidden = true
+            aboutUsVC.view.isHidden = true
+            shareVC.view.isHidden = true
+        }else if named == "Favorite"{
+            self.title = named
+            favoriteVC.view.isHidden = false
+            aboutUsVC.view.isHidden = true
+            shareVC.view.isHidden = true
+        }else if named == "Share"{
+            self.title = named
+            favoriteVC.view.isHidden = true
+            aboutUsVC.view.isHidden = true
+            shareVC.view.isHidden = false
+        }else if named == "About Us"{
+            self.title = named
+            favoriteVC.view.isHidden = true
+            aboutUsVC.view.isHidden = false
+            shareVC.view.isHidden = true
+        }
+    }
     
     
 }
@@ -63,33 +125,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
 }
 
-// MARK: - Table View for SideMenu
-class MenuController: UITableViewController {
-    private let menuItems: [String]
-    
-    init(with menuItem: [String]) {
-        menuItems = menuItem
-        super.init(nibName: nil, bundle: nil)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    //MARK: Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuItems.count
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = menuItems[indexPath.row]
-        return cell
-    }
-    
-    // MARK: Table view delegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-}
-}
+
